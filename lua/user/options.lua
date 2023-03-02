@@ -1,0 +1,16 @@
+vim.opt.backup = false
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.showtabline = 4
+vim.opt.ignorecase = true
+vim.opt.swapfile = false
+vim.opt.smartindent = true
+vim.opt.numberwidth = 4
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.autoindent = true
+vim.opt.cindent = true
+vim.wo.wrap = false
