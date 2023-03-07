@@ -67,7 +67,11 @@ return require('packer').startup(function(use)
     end
   }
 
-  use 'nvim-treesitter/nvim-treesitter'
+  use {'nvim-treesitter/nvim-treesitter', config = function()
+    require('nvim-treesitter').setup {
+        indent = { enable = true }
+    }
+  end}
 
   --Search
   use 'dyng/ctrlsf.vim'
@@ -93,4 +97,9 @@ return require('packer').startup(function(use)
 
   -- multiple-cursors
   use 'mg979/vim-visual-multi'
+
+  -- Code lines
+  -- use {
+  --   "lukas-reineke/indent-blankline.nvim",
+  -- }  
 end)

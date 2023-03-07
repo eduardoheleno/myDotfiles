@@ -40,6 +40,10 @@ keymap("n", "<Leader>t", ":ToggleTerm direction=float<CR>", opts)
 
 -- nvim-tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>q", ":NvimTreeFocus<CR>", opts)
+
+-- clear selected word
+keymap("n", "<Leader>c", ":noh<CR>", opts)
 
 vim.cmd([[
   autocmd TermEnter term://*toggleterm#*
