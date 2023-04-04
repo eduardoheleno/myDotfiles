@@ -11,3 +11,5 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.wo.wrap = false
+vim.opt.ai = true
+vim.opt.si = true

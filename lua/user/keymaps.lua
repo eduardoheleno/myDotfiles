@@ -43,7 +43,12 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>q", ":NvimTreeFocus<CR>", opts)
 
 -- clear selected word
-keymap("n", "<Leader>c", ":noh<CR>", opts)
+keymap("n", "<Leader>l", ":noh<CR>", opts)
+
+-- change between tabs
+keymap("n", "<Leader>bn", ":BufferNext<CR>", opts)
+keymap("n", "<Leader>bb", ":BufferPrevious<CR>", opts)
+keymap("n", "<Leader>c", ":BufferClose<CR>", opts)
 
 vim.cmd([[
   autocmd TermEnter term://*toggleterm#*

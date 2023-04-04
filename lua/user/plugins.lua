@@ -45,7 +45,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use 'ellisonleao/gruvbox.nvim'
+  use {'ellisonleao/gruvbox.nvim', config = function()
+      require("gruvbox").setup({
+          transparent_mode = true
+      })
+  end}
+  use 'sainnhe/gruvbox-material'
 
   -- LSP
   use {
@@ -98,8 +103,32 @@ return require('packer').startup(function(use)
   -- multiple-cursors
   use 'mg979/vim-visual-multi'
 
-  -- Code lines
-  -- use {
-  --   "lukas-reineke/indent-blankline.nvim",
-  -- }  
+  -- tabs
+   use 'nvim-tree/nvim-web-devicons'
+   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
+  -- lines
+   use {"lukas-reineke/indent-blankline.nvim", config = function()
+        require('indent_blankline').setup{
+            show_end_of_line = true,
+            space_char_blankline = " ",
+            show_trailing_blankline_indent = false
+        }
+   end}
+
+    use {
+      "startup-nvim/startup.nvim",
+      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      config = function()
+        require"startup".setup()
+      end
+    }
+
+    use {'norcalli/nvim-colorizer.lua', config = function()
+        require('colorizer').setup()
+    end}
+
+    use {'lewis6991/gitsigns.nvim', config = function()
+        require('gitsigns').setup()
+    end}
 end)
